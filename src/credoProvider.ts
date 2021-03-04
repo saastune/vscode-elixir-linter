@@ -72,7 +72,7 @@ export default class ElixirLintingProvider {
             return;
         }
 
-        const isNotAnumber = isNaN(parseInt(lineInfo.position, 10)) || isNaN(parseInt(lineInfo.column, 10));
+        const isNotAnumber = isNaN(parseInt(lineInfo.position, 10)); // || isNaN(parseInt(lineInfo.column, 10));
         const isLessThanOrEqualToZero = lineInfo.position <= 0 || lineInfo.column <= 0;
 
         if (isNotAnumber || isLessThanOrEqualToZero) {
